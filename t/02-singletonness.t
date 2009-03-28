@@ -12,7 +12,7 @@ use lib qw(t/lib);
 
 use DBIx::Class::SingletonRows::Tests::TestSchema;
 
-my $dbname = File::Temp->new();
+my $dbname = File::Temp->new()->filename();
 
 my $dbh = DBI->connect("dbi:SQLite:dbname=$dbname", '', '');
 $dbh->do("

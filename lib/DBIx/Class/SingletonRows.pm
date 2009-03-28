@@ -76,7 +76,7 @@ ARTISTIC.txt, respectively.
 
 =cut
 
-$VERSION = '0.1';
+$VERSION = '0.11';
 
 sub inflate_result {
     my $self = shift;
