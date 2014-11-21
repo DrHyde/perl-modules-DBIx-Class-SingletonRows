@@ -10,3 +10,4 @@ GPL2.txt
 CHANGES
 t/pod.t
 META.yml                                 Module meta-data (added by MakeMaker)
+MANIFEST.SKIP
