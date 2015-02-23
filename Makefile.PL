@@ -6,8 +6,9 @@ WriteMakefile(
     NAME          => 'DBIx-Class-SingletonRows',
     META_MERGE => {
         license => 'other',
-        resource => {
-	    repository => 'https://github.com/DrHyde/perl-modules-DBIx-Class-SingletonRows'
+        resources => {
+	    repository => 'https://github.com/DrHyde/perl-modules-DBIx-Class-SingletonRows',
+	    bugtracker => 'https://github.com/DrHyde/perl-modules-DBIx-Class-SingletonRows/issues'
         }
     },
     VERSION_FROM => 'lib/DBIx/Class/SingletonRows.pm',
