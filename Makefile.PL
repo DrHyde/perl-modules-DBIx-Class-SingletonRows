@@ -3,7 +3,7 @@
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME          => 'DBIx-Class-SingletonRows',
+    NAME          => 'DBIx::Class::SingletonRows',
     META_MERGE => {
         license => 'other',
         resources => {
