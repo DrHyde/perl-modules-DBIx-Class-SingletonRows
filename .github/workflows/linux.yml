@@ -1,13 +1,18 @@
 # Auto-generated file, see workflow-templates/linux.yml
+# To rebuild, see rebuild-workflows in https://github.com/DrHyde/meta-perlmodules
 
 on:
   push:
     paths:
       - '.github/workflows/linux.yml'
       - '.github/workflows/run-linux'
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 name: Linux
 jobs:
   list:
+    if: github.actor != 'dependabot[bot]'
     name: list available perl versions
     runs-on: 'ubuntu-latest'
     steps:
@@ -17,7 +22,7 @@ jobs:
         shell: perl {0}
         run: |
           use Actions::Core;
-          set_output(matrix => {perl => [grep { $_ !~ /^5\.(6|8|10)\./ } perl_versions()]});
+          set_output(matrix => {perl => [grep { $_ !~ /^5\.(6|8|10|18)\./ } perl_versions()]});
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
   build:
