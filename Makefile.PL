@@ -4,8 +4,10 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME          => 'DBIx::Class::SingletonRows',
-    META_MERGE => {
+    META_ADD => {
         license => 'open_source',
+},
+META_MERGE => {
         resources => {
 	    repository => 'https://github.com/DrHyde/perl-modules-DBIx-Class-SingletonRows',
 	    bugtracker => 'https://github.com/DrHyde/perl-modules-DBIx-Class-SingletonRows/issues'
